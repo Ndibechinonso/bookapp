@@ -1,0 +1,35 @@
+<div class="login-container">
+  <div class="logoutDiv">
+    <button class="logout">
+      <a routerLink="/"><i class="fas fa-sign-out-alt"></i> Log Out</a>
+    </button>
+  </div>
+ 
+ <div class="spinnerContainer" *ngIf='books.length == 0'><div class="lds-spinner">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div> 
+
+  <div class="bookDiv"  *ngIf='books'>
+    <div *ngFor="let book of books">
+      <div>
+        <a href="{{ book.link }}" target="_blank"
+          ><div class="imgDiv"><img src="{{ book.image }}" /></div>
+          <p class="bookname">{{ book.bookname }}</p></a
+        >
+        <p class="author">{{ book.author }}</p>
+      </div>
+    </div>
+  </div>
+</div>
