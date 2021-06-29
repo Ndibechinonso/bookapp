@@ -7,7 +7,6 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class BooksService {
-  private _url: string ='https://mybooksserver.herokuapp.com/'
   constructor(private http: HttpClient) {
    }
    getBooks(): Observable<IBookStructure[]>{
